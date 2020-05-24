@@ -1,4 +1,5 @@
-from rest_framework import status, viewsets
+from django.http import JsonResponse
+
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 
