@@ -74,7 +74,7 @@ class BillController(viewsets.ModelViewSet):
     # only group user can create bill and add only group members
     def are_valid_group_members(self, users, group_id):
         for user in users:
-            if len(GroupMember.objects.filter(user_id=user)) < 1:
+            if len(GroupMember.objects.filter(user_id=user, gid=group_id)) < 1:
                 return False
         return True
 
